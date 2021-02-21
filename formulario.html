@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC >
+<html lang="es"><!--Se declara el idioma que contendra--->
+<head>
+<!---Definen la forma en la que se codifica un carácter dado en un símbolo en otro sistema de representación--->
+	<meta charset="UTF-8" />
+<!---Define el titulo que se mostrara en la pestaña del navegador--->
+	<title>Formulario</title>
+<!--El meta viewport sirve para ajustar pantalla en caso de que se ejecute en algun navegador de un movil o para ajustar dimensiones--->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!---Omite la descarga para poder aplicar los estilos de CSS y JS compilados de Bootstrap a su proyecto.--->
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+	 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+<!---Se pone este enlace para poder colocar iconos dentro de nuestra pagina--->
+	  <script src="https://kit.fontawesome.com/819e75d830.js" crossorigin="anonymous"></script>
+
+<!---Se crea un estilo con css para agregar una imagen de fondo al formulario--->
+		<style>body{
+			background: url(https://pbs.twimg.com/media/EhNbC-qXgAAb0s6?format=jpg&name=medium) no-repeat fixed center center #333;
+			background-size: cover;}
+		</style><!---Aqui se determinan valores t se manda llamar una imagen para mostraral y ajustarla al tamaño del cuerpo de la pagina--->
+</head>
+<body >
+	
+	<div class="container"><!---Se declara la clase container para una mejor disposicion del cuerpo--->
+		<center><h2>Inscribete</h2></center><!---Titulo del fomrulario--->
+<!---Se importan iconos desde fotn awesome--->	
+		<i class="fas fa-align-justify fa-2x"></i><!---Se coloca un icono de menu haciendo iso de los font awesome y se le asigna un tamaño determinado--->	
+			<center><i class="fas fa-camera fa-6x"></i></center><!---Se asigna un icono de una camara para darle mas éfasis a la pagina --->	
+			<p class="text-success">.</p></center><!---Se agrega un espacio para mejor presentacion--->			
+
+<!---Se manda llamar un label para ingresar sus apellidos--->
+		<from class="row gy-3 gx-3 align-items-center" action="" method="post" ectype="multipart/from-data"><!---Se declara una fila con dimensiones determinadas ademas de que aqui se hizo uso el uso del metodo post, lo cual solo muestra la url normal, no decidimos usar el metodo get ya que quita un poco de estitca a la pagina--->	
+			<div class="col-sm-6"><!---Se agrega un tamaño--->	
+    			<label for="inputAddress" class="form-label"><b>Apellidos</b></label><!---Se agrega el nombre del label que contendra los datos en este caso los apellidos--->	
+		    	<input type="text" class="form-control" id="inputAddress" placeholder="">
+  			</div>
+
+<!---Se manda llamar un label para ingresar sus nombres--->
+	  		<div class="col-sm-6"><!---Se agrega un tamaño--->	
+	    		<label for="inputAddress" class="form-label"><b>Nombre</b></label><!---Se agrega el nombre del label que contendra los datos en este caso los o el nombre--->	
+    			<input type="text" class="form-control" id="inputAddress" placeholder="">
+  			</div>
+
+<!---Se habilita una seccion para seleccionar el sexo--->
+			<h6>Sexo</h6><!---Se pone un titulo para indicar una verificacion dentro del formulario--->
+			<div class="form-check"><!---Se indica el tipo de componente, en este caso una verificacion--->
+  				<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  				<label class="form-check-label" for="flexRadioDefault1"><b>Masculino</b></label><!---Opcion de verificacion 1--->
+			</div>
+			<div class="form-check">
+  				<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  				<label class="form-check-label" for="flexRadioDefault2"><b>Femenino</b></label><!---Opcion de verificacion 2--->
+			</div>
+
+<!---Se manda llamar un menú desplegable para seleecionar la region--->
+  			<div class = "col-md-3"><!---Se declara el tamaño que tendra la columna despegable--->
+	  			<select class="form-select" aria-label="Default select example">
+  					<option selected>Edad</option><!---Se selecciona el texto inicaial que contendra--->
+  					<option value="1">Entre 18 y 29</option><!---Opcion despegable numero 1--->
+ 					<option value="2">Entre 30 y 50</option><!---Opcion despegable numero 2--->
+  					<option value="3">Mas de 50</option><!---Opcion despegable numero 3--->
+				</select>
+			</div>	
+
+<!---Se llama a un label para poder ingresar el nombre de ususario--->
+  				<div class="col-sm-5"><!---Se declara el tamaño del label--->
+    				<label class="visually-hidden" for="specificSizeInputGroupUsername">Nombre de usuario</label><!---Se asigna el nombre del campo--->
+	    				<div class="input-group">
+      						<div class="input-group-text">@</div><!---Se le asigna una aroba al inico para dar una mayor presentacion al insertar un usuario--->
+      						<input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Nombre de usuario">
+		    		</div>
+  				</div>
+  			
+<!---Se manda llamar un label para apoder ingrsar el correo electronico--->
+ 			<div class="mb-3"><!---Se declara el tamaño del label--->
+	   			<label for="exampleInputEmail1" class="form-label"><b>Correo electronico</b></label><!---Se asigna el nombre del campo---><i class="fas fa-envelope fa-1x"> </i>	
+    			<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+   				<div id="emailHelp" class="form-text-dark">No se compartirá la información</div><!--Se muestra un mensaje en la parte inferior para dar una indicación--->
+  			</div>
+
+<!---Se manda llamar un label para apoder ingrsar el la contraseña--->
+  			<div class="mb-3"><!---Se declara el tamaño del label--->
+   				<label for="exampleInputPassword1" class="form-label"><b>Contraseña</b></label><!---Se asigna el nombre del campo--->
+    			<input type="password" class="form-control" id="exampleInputPassword1">
+    			<div id="emailHelp" class="form-text-darks">Debe contener mayusculas y numeros</div><!--Se muestra un mensaje en la parte inferior para dar una indicación--->
+  			</div>
+
+<!---Se manda llamar un label para confirmar la contraseña--->
+	  		<div class="mb-3"><!---Se declara el tamaño del label--->
+	   			<label for="exampleInputPassword1" class="form-label"><b>Confirmar ontraseña</b></label><!---Se asigna el nombre del campo--->
+		    	<input type="password" class="form-control" id="exampleInputPassword1">
+  			</div>
+
+<!---Se manda llamar un label para ingresar su ciudad--->
+			<div class="col-sm-4"><!---Se declara el tamaño del label--->
+    			<label for="inputAddress" class="form-label"><b>Ciudad</b></label><!---Se asigna el nombre del campo--->
+		    	<input type="text" class="form-control" id="inputAddress" placeholder="">
+  			</div>
+
+<!---Se manda llamar un label para ingresar su codigo postal--->
+			<div class="col-sm-4"><!---Se declara el tamaño del label--->
+    			<label for="inputAddress" class="form-label"><b>Codigo postal</b></label><!---Se asigna el nombre del campo--->
+		    	<input type="text" class="form-control" id="inputAddress" placeholder="">
+  			</div>
+
+<!---Se manda llamar un label para ingresar su numero de telefono--->
+			<div class="col-sm-4"><!---Se declara el tamaño del label--->
+    			<label for="inputAddress" class="form-label"><b>Numero de telefono</b></label><!---Se asigna el nombre del campo---><i class="fas fa-phone fa-1x"> </i>	
+		    	<input type="text" class="form-control" id="inputAddress" placeholder="">
+  			</div>		  	
+
+<!---Se manda llamar  una casilla de verificación--->
+  			<div class="mb-3 form-check"><!---Se asigna la casilla de verificacion--->
+	    		<input type="checkbox" class="form-check-input" id="exampleCheck1">
+    			<label class="form-check-label" for="exampleCheck1"><b>Acepto terminos y condiciones</b></label><!---Se determina el nombre o uso de la casilla de verificacion--->
+  			</div>
+	
+	</div>
+
+<!---Se crea un boton para indicar el registro--->
+  		<center><button type="submit" class="btn btn-primary">Cancelar</button>
+  		<button type="submit" class="btn btn-primary" >Registrarse</button></center>
+	 </from><!---Se cierra el formulario--->
+
+	<center><p class="text-success">.</p></center><!---Se utilizo para dar un pequeño espacio--->
+<!---Datos de los integrantes--->
+	<div class="container">
+		<b><center><p class="bg-info">Martinez Salazar Ingrid Valeria - 18011T01</p></center>
+		<center><p class="bg-info">Mera Perez Cesar Sebastian - 18011336</p></center>
+		<center><p class="bg-info">Reyes Martinez Brayan Aliux - 18011320</p></center></b>
+	</div><!---Se centraron los datos con letras en negritas ademas de que se utilizo un color de fondo para resaltar mas las letras y no se perdieran con la imagen--->
+</body>
+ </html>
